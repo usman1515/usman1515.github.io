@@ -1,0 +1,290 @@
+/*
+* Lit v0.1
+* CSS file written by Arham Jain (https://github.com/ajusa)
+*
+* Downloaded from https://github.com/ajusa/lit on November 23, 2020
+* Adapted and revised by Przemyslaw Pawelczak (p.pawelczak@tudelft.nl) on December 8, 2020
+*/
+
+/* Notes */
+
+/* 
+* Icons (LinkedIn, GitHub, Twitter, Google Scholar) downloaded from https://icons8.com/ on November 25, 2020
+*/
+
+/*
+* To create single color image from a color palette
+* convert -size 800x200 xc:#4d4dff banner_4d4dff.png
+*/
+
+:root {
+ --font: 'Noto_Sans';
+ --line-height: 0.85em;
+ --margin: 20px;
+ --color-1: #005DAF; /*Emphasis button (dark color); Paper button (code, videos, etc.)*/ /*Person's button*/
+ --color-2: #3B4DA8; /*Menu button*/ /*Link*/
+ --color-3: #00684A; /*CV button*/
+ --color-4: #7D84A8; /*NOT USED YET*/
+ --color-5: #81358A; /*Emphasis button (light color)*/
+ --color-6: #FFFFFF;
+ --separator-before: "[";
+ --separator-after: "]";
+}
+
+@font-face {
+ font-family: 'Noto_Sans';
+ src: url('../fonts/Noto_Sans/NotoSans-Regular.ttf') format('truetype'); /* Downloaded from https://fonts.google.com/specimen/Ubuntu on December 1, 2020 */
+}
+
+body {
+ font-family: 'Noto_Sans';
+}
+
+#face_image {
+ border-radius: 50%; /* make image circular */
+ width: 100%; 
+ height: auto; 
+ padding: 0px; /* space around element */
+ float: center; /* position against the text */
+ margin: 0px;
+ display: block;
+ vertical-align: middle;
+ text-align: center;
+}
+
+#chip_image {
+ width: 100%; 
+ height: auto; 
+ padding: 0px; /* space around element */
+ float: center; /* position against the text */
+ margin: 0px;
+ display: block;
+ vertical-align: middle;
+ text-align: center;
+}
+
+
+* {
+ box-sizing: border-box;
+}
+
+*+* {
+ margin: .5em 0;
+}
+
+.row {
+ width: 100%;
+}
+
+.card{
+ padding: 1em;
+ border: none var(--color-1);
+}
+
+.c {
+ max-width: 60em;
+ padding: 1em;
+ margin: auto;
+ font: 1em/1.6 var(--font);
+}
+
+h6 {
+ font: 100 1em var(--font); /* boldness, font-size */
+ line-height: var(--line-height);
+}
+
+h5 {
+ font: 100 1.2em var(--font);
+ line-height: var(--line-height);
+}
+
+h4 {
+ font: 100 1.5em var(--font);
+ line-height: var(--line-height);
+}
+
+h3 {
+ font: 300 2.0em var(--font);
+ line-height: var(--line-height);
+}
+
+h2 {
+ font: 400 2.2em var(--font);
+ line-height: var(--line-height);
+}
+
+h1 {
+ font: 600 2.5em var(--font);
+ line-height: var(--line-height);
+}
+
+a {
+ color: var(--color-2);
+ text-decoration: none;
+}
+
+a:hover{
+ opacity: .6;
+}
+
+.add_margin_top_positive {
+ margin-top: calc(var(--margin) * 1.5);
+}
+
+.add_margin_top_negative {
+ margin-top: calc(var(--margin) * 0.5);
+}
+
+.add_margin_bottom_positive {
+ margin-bottom: calc(var(--margin) * 1.5);
+}
+
+.add_margin_bottom_negative {
+ margin-bottom: calc(var(--margin) * 0.5);
+}
+
+.text_bold {
+ text-decoration: none;
+ font-weight: bold;
+}
+
+.text_underline {
+ text-decoration: underline;
+}
+
+.text_italic {
+ text-decoration: none;
+ font-style: italic;
+}
+
+.text_emphasis {
+ color: var(--color-1);
+ text-decoration: underline;
+}
+
+.text_footer {
+ text-decoration: none;
+ font-size: 0.8em
+}
+
+.btn { /*Emphasis button (light color)*/
+ padding: 0.35em;
+ text-transform: uppercase;
+ background: var(--color-5);
+ color: var(--color-6);
+ font: 0.75em var(--font);
+ border-radius: 10px;
+ font-weight: bold;
+}
+
+.btn_link_2 { /*Emphasis button (dark color); Paper button (code, videos, etc.)*/
+ padding: 0.35em;
+ text-transform: uppercase;
+ background: var(--color-1);
+ color: var(--color-6);
+ border: none;
+ font: 0.75em var(--font);
+ border-radius: 10px;
+ text-align: center;
+ font-weight: bold;
+}
+
+.btn_link_1 { /*CV button*/
+ padding: 0.35em;
+ text-transform: uppercase;
+ background: var(--color-3);
+ color: var(--color-6);
+ border: none;
+ font: 0.75em var(--font);
+ border-radius: 10px;
+ text-align: center;
+ font-weight: bold;
+}
+
+.btn_transparent { /*Person's button*/
+ padding: 0.35em;
+ text-transform: uppercase;
+ color: var(--color-1);
+ border: solid var(--color-1);
+ border-width: thin;
+ font: 0.75em var(--font);
+ border-radius: 10px;
+ font-weight: bold;
+}
+
+.btn_menu { /*Menu button*/
+ padding: 0.35em;
+ text-transform: uppercase;
+ background: var(--color-2);
+ color: var(--color-6);
+ border: none;
+ font: 1em var(--font);
+ border-radius: 10px;
+ text-align: center;
+ font-weight: bold;
+}
+
+.image_small_size{
+ height: 2.2em
+}
+
+.hfill{
+ float: right;
+ margin: 0px;
+}
+
+@media(min-width: 35em) {
+ .col {
+ display: table-cell;
+ text-align: left;
+ vertical-align: middle;
+ }
+ .\31 { /*numbers 31--36 denotes "1--6" in column block*/
+  width: 5%;
+ }
+ .\32 {
+  width: 15%;
+ }
+ .\33 {
+  width: 22%;
+ }
+ .\34 {
+  width: 30%;
+ }
+ .\35 {
+  width: 40%;
+ }
+ .\36 {
+  width: 50%;
+ }
+ .row {
+  display: table;
+  border-spacing: 1em 0;
+ }
+}
+
+@media(max-width: 61em) { /*adapt properties for small screens*/
+ .btn_link_2 {
+  background: var(--color-6);
+  color: var(--color-1);
+ }
+ .btn_transparent {
+  border: none;
+ }
+ .btn_transparent::before {
+  content: var(--separator-before);
+ }
+ .btn_transparent::after {
+  content: var(--separator-after);
+ }
+ .btn {
+  background: var(--color-6);
+  color: var(--color-5);
+ }
+ .btn::before {
+  content: var(--separator-before);
+ }
+ .btn::after {
+  content: var(--separator-after);
+ }
+}
