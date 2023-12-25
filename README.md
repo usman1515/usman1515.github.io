@@ -1,5 +1,3 @@
-<!-- usman1515.github.io -->
-
 # Usman Siddique's personal webpage repository
 
 My personal webpage.
